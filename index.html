@@ -8,7 +8,7 @@
     <script src="js/jquery.2.0.js"></script>
 
     <script type="text/javascript">
-        document.write("<script src=\"js\/jquery.switcher.js?" + (new Date()).getTime() + "\"><\/script>");
+	    document.write("<script src=\"js\/jquery.switcher.js?" + (new Date()).getTime() + "\"><\/script>");
         document.write("<link rel=\"stylesheet\" href=\"css\/style.css?" + (new Date()).getTime() + "\" type=\"text/css\">");
     </script>
 
@@ -36,7 +36,28 @@
 
 	$('.switcher').switcher({
 		prefix: 'switcher',
-		delay: 300
+		autoswitch: true,
+		saveposition: true,
+		delay: 300,
+		beforeOpen: function() {
+			 console.log('beforeOpen');
+		},
+		afterOpen: function() {
+			console.log('afterOpen');
+		},
+		beforeClose: function() {
+			console.log('beforeClose');
+		},
+		afterClose: function() {
+			console.log('afterClose');
+		},
+		onSuccess: function() {
+			console.log('onSuccess');
+		},
+		onComplete: function() {
+			console.log('onComplete');
+		}
+
 	});
 
 
