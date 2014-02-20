@@ -24,7 +24,7 @@
 	<h2 class="switcher_header">
 		switcher_header
 	</h2>
-	<a href="" class="switcher_expand">switcher</a>
+	<a href="" class="switcher_expand">+</a>
 	<div class="switcher_content">
 		switcher_content
 	</div>
@@ -36,8 +36,6 @@
 
 	$('.switcher').switcher({
 		prefix: 'switcher',
-		autoswitch: true,
-		saveposition: true,
 		delay: 300,
 		beforeOpen: function() {
 			 console.log('beforeOpen');

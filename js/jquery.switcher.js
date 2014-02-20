@@ -3,6 +3,7 @@ $.fn.switcher = function(options) {
 		delay: 300,
 		autoswitch:     false,
 		saveposition:   false,
+		buttonTitle:   { toOpen: "+", toClose: "-"},
 		beforeOpen:     false,
 		afterOpen:      false,
 		beforeClose:    false,
@@ -16,6 +17,7 @@ $.fn.switcher = function(options) {
 			delay = settings.delay,
 			autoswitch = settings.autoswitch,
 			saveposition = settings.saveposition,
+			buttonTitle = settings.buttonTitle,
 			beforeOpen = settings.beforeOpen,
 			afterOpen = settings.afterOpen,
 			beforeClose = settings.beforeClose,
@@ -54,6 +56,8 @@ $.fn.switcher = function(options) {
 
 				if (saveposition) saveState(prefix, "");
 
+				button.html(buttonTitle.toOpen);
+
 			} else {
 
 				if (beforeOpen) {
@@ -75,6 +79,8 @@ $.fn.switcher = function(options) {
 				});
 
 				if (saveposition) saveState(prefix, "opened");
+
+				button.html(buttonTitle.toClose);
 
 			}
 
