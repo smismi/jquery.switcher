@@ -2,15 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>query._</title>
+    <title>query.Switcher</title>
 
-
-     
 
     <script src="js/jquery.2.0.js"></script>
 
     <script type="text/javascript">
-        document.write("<script src=\"js\/jquery._.js?" + (new Date()).getTime() + "\"><\/script>");
+        document.write("<script src=\"js\/jquery.switcher.js?" + (new Date()).getTime() + "\"><\/script>");
         document.write("<link rel=\"stylesheet\" href=\"css\/style.css?" + (new Date()).getTime() + "\" type=\"text/css\">");
     </script>
 
@@ -18,12 +16,30 @@
 </head>
 <body>   
  
-<h1>PLUGIN</h1>
+<h1>PLUGIN Switcher</h1>
 
+
+
+<div class="switcher switcher_closed" id="switcher">
+	<h2 class="switcher_header">
+		switcher_header
+	</h2>
+	<a href="" class="switcher_expand">switcher</a>
+	<div class="switcher_content">
+		switcher_content
+	</div>
+</div>
  
 
 <script type="text/javascript">
-    $('#selector')._();
+
+
+	$('.switcher').switcher({
+		prefix: 'switcher',
+		delay: 300
+	});
+
+
 </script>
 
 </body>
